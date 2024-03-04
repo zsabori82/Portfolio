@@ -28,7 +28,8 @@
     90deg,
     rgba(255, 255, 255, 1) 70%,
     rgba(255, 255, 255, 0) 120%
-  )};
+  );
+}
   .text-effect {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;

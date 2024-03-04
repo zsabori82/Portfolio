@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";  // Import Link from react-router-dom
 import styles from "./About.module.css";
 import { getImageUrl } from "../../utils";
 
@@ -15,55 +15,22 @@ export const About = () => {
         />
         <ul className={styles.aboutItems}>
           <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
+            <img src={getImageUrl("about/cursorIcon.png")} alt="UI icon" />
             <div className={styles.aboutItemText}>
               <h3>Frontend Developer</h3>
-      <h2>About Me</h2>
-      <p>I am a front-end developer.As a front-end developer creates websites and applications using web languages such as HTML, CSS, and JavaScript that allow users to access and interact with the site or app.
-      </p>
-      
-      </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/serverIcon.png")} alt="Url icon" />
-            <div className={styles.aboutItemText}>
-              <h3>Backend Developer</h3>
+              <h2>About Me</h2>
               <p>
-                I have experience developing fast and optimised back-end systems
-                and APIs
+                I am a front-end developer. As a front-end developer creates websites and applications using web languages such as HTML, CSS, and JavaScript that allow users to access and interact with the site or app.
               </p>
+              {/* Updated links to use Link component */}
+              <Link to="/experience">Check out my experience</Link>
             </div>
           </li>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="UI icon" />
-            <div className={styles.aboutItemText}>
-              <h3>|Frontend Developer</h3>
-              <p>
-                I am a frontend developer with experience in building responsive websites.
-              </p>
-            </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="UI icon" />
-            <div className={styles.aboutItemText}>
-              <h3>|Backend Developer</h3>
-              <p>
-                I have experience in developing fast and optimised back-end systems and APIs.
-              </p>
-            </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="UI icon" />
-            <div className={styles.aboutItemText}>
-              <h3>|UI Designer</h3>
-              <p>
-              I create beautiful, modern designs optimized for multiple color modes (light and dark themes).
-              </p>
-            </div>
-          </li>
+          {/* ... (other about items) */}
         </ul>
       </div>
     </section>
   );
 };
+
 export default About;

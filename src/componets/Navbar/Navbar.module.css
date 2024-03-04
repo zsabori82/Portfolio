@@ -41,10 +41,11 @@
   gap: 11px;
   z-index: 3;
 }
-.menuNtn {
+.menuBtn {
   display: block;
   cursor: pointer;
 }
+
 .menuItems {
   display: none;
   flex-direction: column;

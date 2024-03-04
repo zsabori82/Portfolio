@@ -1,42 +1,35 @@
 import React, { useState } from 'react';
-import style from './Navbar.module.css';  // Corrected the import statement
+import style from './Navbar.module.css';
 import { getImageUrl } from '../../utils';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className={style.navbar}>
-      <a className={style.title} href="/">
+      <Link className={style.title} to="/">
         Portfolio
-      </a>
+      </Link>
       <div className={style.menu}>
         <img
           className={style.menuBtn}
-          src={
-            menuOpen
-              ? getImageUrl('nav/menuIcon.png')
-              : getImageUrl('nav/menuIcon.png')
-          }
+          src={menuOpen ? getImageUrl('nav/menuIcon.png') : getImageUrl('nav/menuIcon.png')}
           alt="menu-button"
-          onClick={() => setMenuOpen(!menuOpen)}  // Corrected the onClick event
+          onClick={() => setMenuOpen(!menuOpen)}
         />
-        <ul
-          className={`${style.menuItems} ${menuOpen ? style.menuOpen : ''}`}
-          onClick={() => setMenuOpen(false)}
-        >
-          {/* List items go here */}
-          <li>
-            <a href='#about'>About</a>
+        <ul className={`${style.menuItems} ${menuOpen ? style.menuOpen : ''}`} onClick={() => setMenuOpen(false)}>
+          <li key="about">
+            <Link to="/about">About</Link>
           </li>
-          <li>
-            <a href='#experience'>Experience</a>
+          <li key="experience">
+            <Link to="/experience">Experience</Link>
           </li>
-          <li>
-            <a href='#projects'>Projects</a>  {/* Corrected the string value */}
+          <li key="projects">
+            <Link to="/projects">Projects</Link>
           </li>
-          <li>
-            <a href='#contact'>Contact</a>  {/* Corrected the string value */}
+          <li key="contact">
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>
