@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 //import { shallow } from "enzyme"; // Assuming using Enzyme for testing
-import styles from "./Experience.css?inline";
+import styles from "./Experience.module.css";
 
 import skills from "../../data/skills.json";
 import history from "../../data/history.json";
@@ -54,3 +54,5 @@ export const Experience = () => {
     </section>
   );
 }
+
+export default Experience;

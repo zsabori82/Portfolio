@@ -1,10 +1,9 @@
 import React from "react";
 
-import styles from "./Hero.css";
+import styles from "./Hero.module.css";
 import { getImageUrl } from "../../utils";
-
-export const Hero = () => {
-  return (
+  const Hero = () => {
+      return (
     <section className={styles.container}>
       <div className={styles.content}>
         <h1 className={styles.title}>Hi, I'm Zeinab</h1>
@@ -16,7 +15,7 @@ export const Hero = () => {
         </a>
       </div>
       <img
-        src={getImageUrl("hero/amination(1).png")}
+        src={getImageUrl("hero/animation(1).png")}
         alt="Hero image of me"
         className={styles.heroImg}
       />
@@ -25,4 +24,4 @@ export const Hero = () => {
     </section>
   );
 };
-     
+export default Hero;
