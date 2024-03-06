@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";  // Import Link from react-router-dom
-import styles from "./About.module.css";
+import styles from "./About.css";
 import { getImageUrl } from "../../utils";
 
 export const About = () => {

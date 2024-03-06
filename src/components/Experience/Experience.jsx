@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import { shallow } from "enzyme"; // Assuming using Enzyme for testing
-import styles from "./Experience.module.css";
+//import { shallow } from "enzyme"; // Assuming using Enzyme for testing
+import styles from "./Experience.css?inline";
+
 import skills from "../../data/skills.json";
 import history from "../../data/history.json";
 import { getImageUrl } from "../../utils";
-
+import "../../utils";
 export const Experience = () => {
   /**
    * Renders a section displaying skills and work history.
@@ -53,4 +54,3 @@ export const Experience = () => {
     </section>
   );
 }
-};

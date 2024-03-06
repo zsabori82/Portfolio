@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import style from './Navbar.module.css';
+import style from "./Navbar";
+
 import { getImageUrl } from '../../utils';
 import { Link } from 'react-router-dom';
 
