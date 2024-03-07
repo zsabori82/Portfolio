@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import style from "./Navbar";
+import style from "./Navbar.module.css";
 
 import { getImageUrl } from '../../utils';
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
+const [menuOpen, setMenuOpen] = useState(false);
+console.log('NavBar State:', menuOpen);
   return (
     <nav className={style.navbar}>
       <Link className={style.title} to="/">
@@ -15,11 +15,18 @@ export const Navbar = () => {
       <div className={style.menu}>
         <img
           className={style.menuBtn}
-          src={menuOpen ? getImageUrl('nav/menuIcon.png') : getImageUrl('nav/menuIcon.png')}
+          src={menuOpen
+            ? getImageUrl("nav/closeIcon.png")
+            : getImageUrl("nav/menuIcon.png")
+          }
           alt="menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
         />
-        <ul className={`${style.menuItems} ${menuOpen ? style.menuOpen : ''}`} onClick={() => setMenuOpen(false)}>
+        {menuOpen && (
+        <ul 
+        className={`${style.menuItems} ${menuOpen ? style.menuOpen : ''}`}
+          onClick={() => setMenuOpen(false)}>
+
           <li key="about">
             <Link to="/about">About</Link>
           </li>
@@ -33,7 +40,9 @@ export const Navbar = () => {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
+        )}
       </div>
+
     </nav>
   );
 };

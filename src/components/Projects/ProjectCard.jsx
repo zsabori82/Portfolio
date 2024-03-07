@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "./ProjectCard.css?inline";
-//import styles from "./ProjectCard.css";
+import styles from "./ProjectCard.module.css";
 import { getImageUrl } from "../../utils";
 
 export const ProjectCard = ({
