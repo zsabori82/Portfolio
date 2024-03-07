@@ -3,6 +3,8 @@ import React from "react";
 import styles from "./Contact.module.css";
 
 import { getImageUrl } from "../../utils";
+import ContactForm from "./ContactForm";
+
 
 const Contact = () => {
   return (
@@ -29,6 +31,17 @@ const Contact = () => {
           <a href="https://www.github.com/myname">https://github.com/zsabori82</a>
         </li>
       </ul>
+      <ContactForm />
+      <a
+        href="/contactform/my-cv.pdf"  // Replace with the actual path to your CV
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.cvLink}
+      >
+        
+        Download CV
+      </a>
+      {/* Rest of the existing JSX structure */}
     </footer>
   );
 };
